@@ -35,17 +35,6 @@ export FLUTTER_HOME=/devops/fvm/default/
 export PATH="$FLUTTER_HOME/bin:$PATH"
 flutter --version
 
-# Install NVM (Node Version Manager)
-curl -o /devops/nvm-install.sh https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
-mkdir /devops/nvm
-export NVM_DIR="/devops/nvm"  # Define the installation directory
-bash /devops/nvm-install.sh  # Run the NVM installation script
-export NVM_DIR="/devops/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # Load nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # Load nvm bash_completion
-nvm install 16.16.0
-node -v
-
 # Install Android SDK
 wget https://dl.google.com/android/repository/commandlinetools-linux-10406996_latest.zip
 mkdir /devops/android-sdk/
