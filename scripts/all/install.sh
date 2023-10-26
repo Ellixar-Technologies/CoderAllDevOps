@@ -26,6 +26,7 @@ cp -r $HOME/.pub-cache /devops/
 cp -r $HOME/.pub-cache /devops/fvm
 export FVM_HOME=/devops/fvm
 export PATH="/devops/fvm/.pub-cache/bin:$PATH"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 fvm --version
 sudo mkdir /devops/fvm/versions
 fvm config --cache-path /devops/fvm/versions
