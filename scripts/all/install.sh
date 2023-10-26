@@ -30,10 +30,15 @@ fvm --version
 sudo mkdir /devops/fvm/versions
 fvm config --cache-path /devops/fvm/versions
 fvm install 3.3.1
+git config --global --add safe.directory /devops/fvm/versions/3.3.1
+sudo chown -R $(whoami) /devops/
+sudo chown -R $(whoami) /devops/fvm/versions/3.3.1/bin/cache/lockfile
+dart pub global activate fvm
 fvm global 3.3.1
 export FLUTTER_HOME=/devops/fvm/default/
 export PATH="$FLUTTER_HOME/bin:$PATH"
 flutter --version
+
 
 # Install NVM (Node Version Manager)
 curl -o /devops/nvm-install.sh https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
