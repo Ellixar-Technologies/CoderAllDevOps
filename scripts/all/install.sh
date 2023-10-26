@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Update package repositories
-apt update
+sudo apt update
 
 # Install essential packages
-apt install -y curl git unzip wget build-essential libxml2-dev libssl-dev libbz2-dev libjpeg-dev libpng-dev libwebp-dev libxpm-dev libfreetype6-dev libonig-dev libcurl4-openssl-dev libreadline-dev libzip-dev libtidy-dev libxslt1-dev libssl-dev libicu-dev
-mkdir /devops/
+sudo apt install -y curl git unzip wget build-essential libxml2-dev libssl-dev libbz2-dev libjpeg-dev libpng-dev libwebp-dev libxpm-dev libfreetype6-dev libonig-dev libcurl4-openssl-dev libreadline-dev libzip-dev libtidy-dev libxslt1-dev libssl-dev libicu-dev
+sudo mkdir /devops/
 
 # Install Flutter
 git clone https://github.com/flutter/flutter.git /devops/flutter
@@ -21,13 +21,13 @@ dart --version
 
 # Install FVM
 dart pub global activate fvm
-mkdir /devops/fvm/
+sudo mkdir /devops/fvm/
 cp -r $HOME/.pub-cache /devops/
 cp -r $HOME/.pub-cache /devops/fvm
 export FVM_HOME=/devops/fvm
 export PATH="/devops/fvm/.pub-cache/bin:$PATH"
 fvm --version
-mkdir /devops/fvm/versions
+sudo mkdir /devops/fvm/versions
 fvm config --cache-path /devops/fvm/versions
 fvm install 3.3.1
 fvm global 3.3.1
@@ -37,7 +37,7 @@ flutter --version
 
 # Install NVM (Node Version Manager)
 curl -o /devops/nvm-install.sh https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
-mkdir /devops/nvm
+sudo mkdir /devops/nvm
 export NVM_DIR="/devops/nvm"  # Define the installation directory
 bash /devops/nvm-install.sh  # Run the NVM installation script
 export NVM_DIR="/devops/nvm"
@@ -48,9 +48,9 @@ node -v
 
 # Install Android SDK
 wget https://dl.google.com/android/repository/commandlinetools-linux-10406996_latest.zip
-mkdir /devops/android-sdk/
+sudo mkdir /devops/android-sdk/
 unzip commandlinetools-linux-10406996_latest.zip -d /devops/android-sdk
-mkdir /devops/android-sdk/cmdline-tools/latest
+sudo mkdir /devops/android-sdk/cmdline-tools/latest
 mv /devops/android-sdk/cmdline-tools/* /devops/android-sdk/cmdline-tools/latest/
 export ANDROID_SDK_ROOT="/devops/android-sdk"
 export PATH="$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/platform-tools"
