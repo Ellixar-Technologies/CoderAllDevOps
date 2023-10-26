@@ -39,6 +39,7 @@ fvm global 3.3.1
 export FLUTTER_HOME=/devops/fvm/default/
 export PATH="$FLUTTER_HOME/bin:$PATH"
 flutter --version
+dart pub global activate fvm
 
 
 # Install NVM (Node Version Manager)
