@@ -5,8 +5,8 @@ sudo apt update
 
 # Install essential packages
 sudo apt install -y curl git unzip wget build-essential libxml2-dev libssl-dev libbz2-dev libjpeg-dev libpng-dev libwebp-dev libxpm-dev libfreetype6-dev libonig-dev libcurl4-openssl-dev libreadline-dev libzip-dev libtidy-dev libxslt1-dev libssl-dev libicu-dev
-mkdir /home/$USER/devops/
-#sudo chown -R $USER:$USER /home/$USER/devops
+mkdir /home/$USER/devops
+sudo chown -R $USER:$USER /home/$USER/devops
 
 # Install Flutter
 git clone https://github.com/flutter/flutter.git /devops/flutter
