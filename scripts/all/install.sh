@@ -7,7 +7,7 @@ sudo apt update
 sudo apt install -y curl git unzip wget build-essential libxml2-dev libssl-dev libbz2-dev libjpeg-dev libpng-dev libwebp-dev libxpm-dev libfreetype6-dev libonig-dev libcurl4-openssl-dev libreadline-dev libzip-dev libtidy-dev libxslt1-dev libssl-dev libicu-dev
 
 # Get the current username
-USER=$(whoami)
+#USER=$(whoami)
 
 mkdir /home/$USER/devops
 sudo chown -R $USER:$USER /home/$USER/devops
