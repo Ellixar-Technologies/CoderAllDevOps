@@ -22,6 +22,7 @@ dart --version
 # Install FVM
 dart pub global activate fvm
 mkdir /devops/fvm/
+sudo chmod -R 666 /devops/fvm/
 cp -r $HOME/.pub-cache /devops/
 cp -r $HOME/.pub-cache /devops/fvm
 export FVM_HOME=/devops/fvm
