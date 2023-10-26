@@ -45,7 +45,7 @@ bash /home/$USER/devops/nvm-install.sh  # Run the NVM installation script
 export NVM_DIR="/home/$USER/devops/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # Load nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # Load nvm bash_completion
-nvm install 16.16.0
+nvm install 16.20.0
 node -v
 
 # Install Android SDK
