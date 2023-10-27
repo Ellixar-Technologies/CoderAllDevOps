@@ -63,6 +63,7 @@ export ANDROID_SDK_ROOT="~/devops/android-sdk"
 export PATH="$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/platform-tools"
 
 # Install OpenJDK
+sudo mkdir ~/devops/openlogic-openjdk-17.0.8+7-linux-x64
 wget https://builds.openlogic.com/downloadJDK/openlogic-openjdk/17.0.8+7/openlogic-openjdk-17.0.8+7-linux-x64.tar.gz
 tar -xzvf openlogic-openjdk-17.0.8+7-linux-x64.tar.gz -C ~/devops/
 export JAVA_HOME=~/devops/openlogic-openjdk-17.0.8+7-linux-x64
