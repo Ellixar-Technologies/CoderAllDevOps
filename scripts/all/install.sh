@@ -35,6 +35,10 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 fvm --version
 sudo mkdir $USER_HOME/devops/fvm/versions
 fvm config --cache-path $USER_HOME/devops/fvm/versions
+
+# Change ownership of the entire 'fvm' directory and its contents
+sudo chown -R $(whoami) $USER_HOME/devops/fvm
+
 fvm install 3.3.1
 git config --global --add safe.directory $USER_HOME/devops/fvm/versions/3.3.1
 sudo chown -R $(whoami) $USER_HOME/devops/fvm
