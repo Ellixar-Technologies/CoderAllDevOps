@@ -9,6 +9,7 @@ sudo apt update
 # Install essential packages
 sudo apt install -y curl git unzip wget build-essential libxml2-dev libssl-dev libbz2-dev libjpeg-dev libpng-dev libwebp-dev libxpm-dev libfreetype6-dev libonig-dev libcurl4-openssl-dev libreadline-dev libzip-dev libtidy-dev libxslt1-dev libssl-dev libicu-dev
 sudo mkdir $USER_HOME/devops/
+sudo chown -R $(whoami) $USER_HOME/devops
 
 # Install Flutter
 sudo mkdir $USER_HOME/devops/flutter
@@ -36,8 +37,8 @@ sudo mkdir $USER_HOME/devops/fvm/versions
 fvm config --cache-path $USER_HOME/devops/fvm/versions
 fvm install 3.3.1
 git config --global --add safe.directory $USER_HOME/devops/fvm/versions/3.3.1
-sudo chown -R $(whoami) $USER_HOME/devops/fvm/versions/3.3.1/bin/cache/lockfile
-sudo chown -R $(whoami) $USER_HOME/devops/fvm/versions/3.3.1/version
+sudo chown -R $(whoami) $USER_HOME/devops/fvm
+sudo chown -R $(whoami) $USER_HOME/devops/fvm/versions/3.3.1  # Change the ownership to the current user
 dart pub global activate fvm
 fvm global 3.3.1
 export FLUTTER_HOME=$USER_HOME/devops/fvm/default/
