@@ -87,4 +87,8 @@ sdkmanager --licenses
 # Verify Java installation
 javac
 
+git config --global --add safe.directory /home/ian/devops/fvm/versions/3.3.1
+sudo chown -R $(whoami) /home/ian/devops/fvm/versions/3.3.1/bin/cache/lockfile
+sudo chown -R $(whoami) /home/ian/devops/fvm/versions/3.3.1/version
+
 echo "Installation completed."
