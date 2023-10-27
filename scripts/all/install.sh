@@ -43,12 +43,14 @@ fvm install 3.3.1
 git config --global --add safe.directory $USER_HOME/devops/fvm/versions/3.3.1
 sudo chown -R $(whoami) $USER_HOME/devops/fvm
 sudo chown -R $(whoami) $USER_HOME/devops/fvm/versions/3.3.1  # Change the ownership to the current user
-dart pub global activate fvm
+sudo chown -R $(whoami) $USER_HOME/devops/fvm/versions/3.3.1/bin/cache/lockfile
+sudo chown -R $(whoami) $USER_HOME/devops/fvm/versions/3.3.1/version
+# dart pub global activate fvm
 fvm global 3.3.1
 export FLUTTER_HOME=$USER_HOME/devops/fvm/default/
 export PATH="$FLUTTER_HOME/bin:$PATH"
 flutter --version
-dart pub global activate fvm
+# dart pub global activate fvm
 
 
 # Install NVM (Node Version Manager)
@@ -86,9 +88,5 @@ sdkmanager --licenses
 
 # Verify Java installation
 javac
-
-git config --global --add safe.directory /home/ian/devops/fvm/versions/3.3.1
-sudo chown -R $(whoami) /home/ian/devops/fvm/versions/3.3.1/bin/cache/lockfile
-sudo chown -R $(whoami) /home/ian/devops/fvm/versions/3.3.1/version
 
 echo "Installation completed."
