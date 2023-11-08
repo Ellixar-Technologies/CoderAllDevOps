@@ -11,7 +11,7 @@ USER_HOME=/home/$USER
 sudo apt update
 
 # Install essential packages
-sudo apt install -y curl git unzip wget build-essential libxml2-dev libssl-dev libbz2-dev libjpeg-dev libpng-dev libwebp-dev libxpm-dev libfreetype6-dev libonig-dev libcurl4-openssl-dev libreadline-dev libzip-dev libtidy-dev libxslt1-dev libssl-dev libicu-dev libxtst6 libxrender1 libfontconfig1 libxi6 libgtk-3-0
+sudo apt install -y curl git unzip wget build-essential software-properties-common libxml2-dev libssl-dev libbz2-dev libjpeg-dev libpng-dev libwebp-dev libxpm-dev libfreetype6-dev libonig-dev libcurl4-openssl-dev libreadline-dev libzip-dev libtidy-dev libxslt1-dev libssl-dev libicu-dev libxtst6 libxrender1 libfontconfig1 libxi6 libgtk-3-0
 sudo mkdir $USER_HOME/devops/
 sudo chown -R $(whoami) $USER_HOME/devops
 
