@@ -1,7 +1,11 @@
 #!/bin/bash
 
+
+#Define user
+USER=ian
+
 # Define the user's home directory
-USER_HOME=/home/ian
+USER_HOME=/home/$USER
 
 # Update package repositories
 sudo apt update
@@ -94,5 +98,7 @@ sudo add-apt-repository ppa:maarten-fonville/android-studio
 sudo apt update
 sudo apt install -y android-studio
 ln -s /opt/android-studio/bin/studio.sh /usr/local/bin/studio
+
+sudo chown -R $USER:$USER $USER_HOME
 
 echo "Installation completed."
