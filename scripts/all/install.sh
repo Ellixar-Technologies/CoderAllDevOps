@@ -5,7 +5,7 @@
 USER=ian
 
 # Define the user's home directory
-USER_HOME=/home/ian
+USER_HOME=/home/$USER
 
 # Update package repositories
 sudo apt update
